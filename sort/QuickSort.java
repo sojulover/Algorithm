@@ -15,6 +15,8 @@ public class QuickSort
 
     for(int i = 0; i < array.length; i++)
       System.out.print(array[i]);
+
+
   }
 
   public static void quickSort(int[] array, int left, int right)
