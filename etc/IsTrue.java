@@ -13,7 +13,9 @@ public class IsTrue
   public static void main(String[] args) throws IOException
   {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    System.out.println(isTrue(br.readLine().toCharArray()));
+    String str = br.readLine().toCharArray();
+    System.out.println(isTrue(str.toCharArray()));
+    System.out.println(isTrue(str));
   }
 
   public static boolean isTrue(char[] str)
@@ -24,6 +26,21 @@ public class IsTrue
     {
       if(str[i] == '1' && str[i + 1] != '2')
         return false;
+    }
+
+    return true;
+  }
+
+  public static boolean isTrue2(String str)
+  {
+    String[] arr = str.split("12");
+
+    for(String a : arr)
+    {
+      if(a.contains("1"))
+      {
+        return false;
+      }
     }
 
     return true;
